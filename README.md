@@ -2,11 +2,13 @@
 
 gradle 에 추가할 때 귀찮아서 정리하는 안드로이드 라이브러리 버전 리스트
 
-최종 업데이트 : 2020.04.14
+최종 업데이트 : 2020.05.15
 
 <br>
 
+
 ## AndroidX
+- [Jetpack](https://developer.android.com/jetpack/androidx/versions/all-channel)
 
 - [ConstraintLayout](https://developer.android.com/jetpack/androidx/releases/constraintlayout)
   - MotionLayout 은 2.0.0 이상
