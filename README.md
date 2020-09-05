@@ -14,7 +14,7 @@ gradle 에 추가할 때 귀찮아서 정리하는 안드로이드 라이브러�
   - MotionLayout 은 2.0.0 이상
 
 ```groovy
-implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+implementation 'androidx.constraintlayout:constraintlayout:2.0.0'
 ```
 
 - [RecyclerView](https://developer.android.com/jetpack/androidx/releases/recyclerview)
@@ -183,6 +183,7 @@ kapt "com.google.dagger:dagger-compiler:${dagger_version}"
 kapt "com.google.dagger:dagger-android-processor:${dagger_version}"
 ```
 
+- [Dagger hilt](https://dagger.dev/hilt/gradle-setup)
 
 
 <br>
