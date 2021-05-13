@@ -12,7 +12,8 @@ gradle 에 추가할 때 귀찮아서 정리하는 안드로이드 라이브러�
 ```groovy
 implementation 'androidx.core:core-ktx:1.3.2'
 implementation 'androidx.activity:activity-ktx:1.2.0-alpha04'
-implementation 'androidx.fragment:fragment-ktx:1.3.3'```
+implementation 'androidx.fragment:fragment-ktx:1.3.3'
+```
 
 - [ConstraintLayout](https://developer.android.com/jetpack/androidx/releases/constraintlayout)
   - MotionLayout 은 2.0.0 이상
