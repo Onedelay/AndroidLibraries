@@ -8,24 +8,29 @@ gradle 에 추가할 때 귀찮아서 정리하는 안드로이드 라이브러�
 ## AndroidX
 - [Jetpack](https://developer.android.com/jetpack/androidx/versions/all-channel)
 
+- KTX
+```groovy
+implementation 'androidx.core:core-ktx:1.3.2'
+implementation 'androidx.activity:activity-ktx:1.2.0-alpha04'
+implementation 'androidx.fragment:fragment-ktx:1.3.3'```
+
 - [ConstraintLayout](https://developer.android.com/jetpack/androidx/releases/constraintlayout)
   - MotionLayout 은 2.0.0 이상
 
 ```groovy
-implementation 'androidx.constraintlayout:constraintlayout:2.0.0'
+implementation 'androidx.constraintlayout:constraintlayout:2.0.3'
 ```
 
 - [RecyclerView](https://developer.android.com/jetpack/androidx/releases/recyclerview)
 
 ```groovy
-implementation "androidx.recyclerview:recyclerview:1.1.0"
+implementation "androidx.recyclerview:recyclerview:1.2.0"
 ```
 
 - [Lifecycle](https://developer.android.com/jetpack/androidx/releases/lifecycle)
-  - ViewModelProvider 쓰려면 필요함
-
 ```groovy
 implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
 ```
 
 - [Room](https://developer.android.com/jetpack/androidx/releases/room)
@@ -44,6 +49,26 @@ android {
     ...
     dataBinding {
         enabled = true
+    }
+}
+```
+
+- [Navigation component](https://developer.android.com/jetpack/androidx/releases/navigation)
+
+```groovy
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+def nav_version = "2.3.5"
+implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+buildscript {
+    repositories {
+        google()
+    }
+    dependencies {
+        def nav_version = "2.3.5"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
     }
 }
 ```
@@ -73,7 +98,7 @@ composeOptions {
 - Android material
 
 ```groovy
-implementation 'com.google.android.material:material:1.1.0'
+implementation 'com.google.android.material:material:1.3.0'
 ```
 
 - [Lottie](https://github.com/airbnb/lottie-android/releases)
@@ -152,7 +177,11 @@ testImplementation "com.jakewharton.rxrelay2:rxrelay:${rxrelay_version}"
 ## Coroutine
 
 ```groovy
-implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0'
+implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
+
+// test
+testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutine_version"
+androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutine_version"
 ```
 
 
@@ -183,6 +212,11 @@ kapt "com.google.dagger:dagger-android-processor:${dagger_version}"
 
 - [Dagger hilt](https://dagger.dev/hilt/gradle-setup)
 
+```groovy
+def hilt_version = "2.34-beta"
+implementation "com.google.dagger:hilt-android:$hilt_version"
+kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+```
 
 <br>
 
