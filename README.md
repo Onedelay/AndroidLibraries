@@ -117,15 +117,15 @@ implementation "com.airbnb.android:lottie:${lottie_version}"
 - [Retrofit](https://github.com/square/retrofit/blob/master/CHANGELOG.md#change-log)
 
 ```groovy
-implementation "com.squareup.retrofit2:retrofit:${retrofit_version}"
-implementation "com.squareup.retrofit2:converter-gson:${retrofit_version}"
-implementation "com.squareup.retrofit2:adapter-rxjava2:${retrofit2_version}"
+implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit2_version"
 ```
 
 - [Gson](https://github.com/google/gson/blob/master/CHANGELOG.md)
 
 ```groovy
-implementation "com.google.code.gson:gson:${gson_version}"
+implementation "com.google.code.gson:gson:$gson_version"
 ```
 
 
@@ -137,8 +137,8 @@ implementation "com.google.code.gson:gson:${gson_version}"
 - [Glide](https://github.com/bumptech/glide/releases)
 
 ```groovy
-implementation "com.github.bumptech.glide:glide:${glide_version}"
-kapt "com.github.bumptech.glide:compiler:${glide_version}"
+implementation "com.github.bumptech.glide:glide:$glide_version"
+kapt "com.github.bumptech.glide:compiler:$glide_version"
 ```
 
 
@@ -150,25 +150,25 @@ kapt "com.github.bumptech.glide:compiler:${glide_version}"
 - [RxJava](https://github.com/ReactiveX/RxJava/releases)
 
 ```groovy
-implementation "io.reactivex.rxjava2:rxjava:${rxjava_version}"
+implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
 ```
 
 - [RxAndroid](https://github.com/ReactiveX/RxAndroid/releases)
 
 ```groovy
-implementation "io.reactivex.rxjava2:rxandroid:${rxandroid_version}"
+implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
 ```
 
 - [RxKotlin](https://github.com/ReactiveX/RxKotlin/releases)
 
 ```groovy
-implementation "io.reactivex.rxjava2:rxkotlin:${rxkotlin_version}"
+implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
 ```
 
 - [RxRelay](https://github.com/JakeWharton/RxRelay/releases)
 
 ```groovy
-testImplementation "com.jakewharton.rxrelay2:rxrelay:${rxrelay_version}"
+testImplementation "com.jakewharton.rxrelay2:rxrelay:$rxrelay_version"
 ```
 
 
@@ -211,10 +211,20 @@ kapt "com.google.dagger:dagger-compiler:${dagger_version}"
 kapt "com.google.dagger:dagger-android-processor:${dagger_version}"
 ```
 
-- [Dagger hilt](https://dagger.dev/hilt/gradle-setup)
+- [Dagger hilt](https://github.com/google/dagger/releases)
 
 ```groovy
-def hilt_version = "2.34-beta"
+plugins {
+    id "kotlin-kapt"
+    id "dagger.hilt.android.plugin"
+}
+
+def hilt_version = "2.41"
+
+dependencies {
+    classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+}
+
 implementation "com.google.dagger:hilt-android:$hilt_version"
 kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 ```
@@ -223,20 +233,11 @@ kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
 ## Debugging
 
-- [Stetho]()
+- Stetho
 
 ```groovy
-implementation "com.facebook.stetho:stetho:${stetho_version}"
-implementation "com.facebook.stetho:stetho-okhttp3:${stetho_version}"
+implementation "com.facebook.stetho:stetho:$stetho_version"
+implementation "com.facebook.stetho:stetho-okhttp3:$stetho_version"
 ```
 
-
-
-
-
-<br>
-
-## Test
-
-- 
 
